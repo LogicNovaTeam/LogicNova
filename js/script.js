@@ -160,3 +160,15 @@ if (contactForm) {
 
 }
 
+// إغلاق القائمة عند الضغط على أي رابط
+const navLinks = document.querySelectorAll(".nav-links a");
+const navMenu = document.querySelector(".nav-links");
+const menuBtn = document.querySelector(".menu-toggle");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuBtn.classList.remove("active");
+    });
+});
+
