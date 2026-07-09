@@ -110,6 +110,8 @@ ul{
 
 .header .container{
 
+    position: relative;
+
     height: 80px;
 
     display: flex;
@@ -119,6 +121,7 @@ ul{
     justify-content: space-between;
 
 }
+
 /* ===================================
    Logo
 =================================== */
@@ -150,6 +153,7 @@ ul{
     color: var(--primary);
 
 }
+
 /* ===================================
    Navigation
 =================================== */
@@ -1158,7 +1162,7 @@ ul{
 @media (max-width:768px){
 
     .header .container{
-
+        position:fixed;
         flex-direction:column;
         height:auto;
         padding:20px 0;
@@ -1935,6 +1939,65 @@ grid-template-columns:1fr;
     background:#f8d7da;
     color:#721c24;
     border:1px solid #f5c6cb;
+
+}
+
+/* ===========================
+   Mobile Menu
+=========================== */
+
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+
+    position:absolute;
+    top:25px;
+    right:20px;
+    z-index:2000;
+}
+
+.menu-toggle span{
+    width:28px;
+    height:3px;
+    background:#fff;
+    border-radius:10px;
+    transition:.3s;
+}
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .navbar{
+        display:none;
+        width:100%;
+        margin-top:20px;
+    }
+
+    .navbar.active{
+        display:block;
+    }
+
+    .navbar ul{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .header .container{
+        position:fixed;
+        flex-wrap:wrap;
+        height:auto;
+        padding:15px 0;
+    }
+
+    .btn-primary{
+        display:none;
+    }
 
 }
 
