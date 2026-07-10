@@ -1,52 +1,88 @@
-/* سيتم إضافة التصميم المتجاوب لاحقًا */
 /* ===========================
    Responsive Design
 =========================== */
 
-@media (max-width: 992px){
+@media (max-width:768px){
 
     .header .container{
-        flex-direction: column;
-        height: auto;
-        padding: 15px 0;
+        position: relative;
+        height: 80px;
+    }
+
+    .menu-toggle{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        gap:6px;
+        cursor:pointer;
+
+        position:absolute;
+        top:50%;
+        right:20px;
+        transform:translateY(-50%);
+        z-index:2000;
+    }
+
+    .menu-toggle span{
+        width:28px;
+        height:3px;
+        background:#fff;
+        border-radius:10px;
     }
 
     .navbar{
-        width: 100%;
-        margin-top: 20px;
+
+        display:none;
+
+        position:absolute;
+
+        top:80px;
+
+        right:15px;
+
+        width:260px;
+
+        background:#0f172a;
+
+        border-radius:15px;
+
+        padding:20px;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+        z-index:1500;
+
+    }
+
+    .navbar.active{
+        display:block;
     }
 
     .navbar ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+
+    .navbar ul li a{
+        display:block;
+        padding:12px;
+        border-radius:10px;
+    }
+
+    .navbar ul li a:hover{
+        background:rgba(255,255,255,.08);
     }
 
     .btn-primary{
-        margin-top: 20px;
-        width: 90%;
-        text-align: center;
+        display:none;
     }
-
-}
-
-@media (max-width:768px){
 
     .container{
         width:90%;
-    }
-
-    h1{
-        font-size:36px;
-    }
-
-    h2{
-        font-size:30px;
-    }
-
-    p{
-        font-size:16px;
     }
 
     img{
