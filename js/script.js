@@ -192,4 +192,3 @@ if (menuToggle && navbar) {
     });
 
 }
-
